@@ -48,7 +48,37 @@ func SimpleValue() {
     ]
     print(emptyDictionary)
     
+    shoppintList = []
+    occupations = [:]
+    
+}
+
+//  控制流
+func controlFolow() {
+    let individualScores = [75, 43, 103, 87, 12]
+    var teamScore = 0
+    for score in individualScores {
+        if score > 50 {
+            teamScore += 3
+        } else {
+            teamScore += 1
+        }
+    }
+    print(teamScore)
+    
+    var optionalString: String? = "Hello"
+    print(optionalString == nil)
+    
+    var optionalName: String? = "John Appleseed"
+    //optionalName = nil
+    var greeting = "Hello!"
+    if let name = optionalName {
+        greeting = "Hello, \(name)"
+    }else{
+        greeting = "k"
+    }
     
 }
 
 SimpleValue()
+controlFolow()
