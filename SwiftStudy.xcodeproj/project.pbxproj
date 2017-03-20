@@ -47,6 +47,7 @@
 		0987D1191E776FCD00650047 /* SwiftStudyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftStudyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0987D11D1E776FCD00650047 /* SwiftStudyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftStudyUITests.swift; sourceTree = "<group>"; };
 		0987D11F1E776FCD00650047 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0987D12B1E7770D100650047 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +100,7 @@
 			children = (
 				0987D0FD1E776FCD00650047 /* AppDelegate.swift */,
 				0987D0FF1E776FCD00650047 /* ViewController.swift */,
+				0987D12B1E7770D100650047 /* MyPlayground.playground */,
 				0987D1011E776FCD00650047 /* Main.storyboard */,
 				0987D1041E776FCD00650047 /* Assets.xcassets */,
 				0987D1061E776FCD00650047 /* LaunchScreen.storyboard */,
