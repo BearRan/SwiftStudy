@@ -260,6 +260,111 @@ func dictionaryDemo () {
     if let oldValue = airports.updateValue("Dublin Airport", forKey: "DUB") {
         print("The old value for DUB was \(oldValue)")
     }
+    
+    //  字典遍历
+    for (airportCode, airportName) in airports {
+        print("\(airportCode) : \(airportName)")
+    }
+    
+    //  通过访问   或者   属性，我们也可以遍历字典的键或者值:
+    for airportCode in airports.keys {
+        print("\(airportCode)")
+    }
+    
+    for airportName in airports.values {
+        print("\(airportName)")
+    }
+    
+}
+
+//  控制流
+func controlFlowDemo () {
+    let base = 3
+    let power = 10
+    var answer = 1
+    for _ in 1...power {
+        answer *= base
+    }
+    answer
+    
+    let numberOfLegs = ["spider" : 3, "ant" : 6, "cat" : 4]
+    for (animalName, legCount) in numberOfLegs
+    {
+        print("\(animalName) : \(legCount)")
+    }
+    //字典元素的遍历顺序和插入顺序可能不同，字典的内容在内部是无序的，所以遍历元素时不能保证顺序。
+
+    //  Switch
+    let someCharacter : Character = "z"
+    switch someCharacter {
+    case "a":
+        print("a")
+    case "z":
+        print("z")
+    default:
+        print("other")
+    }
+    
+    let  anotherCharacter = "A"
+    
+    switch anotherCharacter {
+    case "a", "A":
+        print("A")
+    default:
+        print("Other")
+    }
+    
+    //  区间匹配
+    let approiximateCount = 62
+    let countedThings = "moons orbiting Saturn"
+    var naturalCount : String
+    switch approiximateCount {
+    case 0:
+        naturalCount = "no"
+    case 1..<5:
+        naturalCount = "a few"
+    case 5..<12:
+        naturalCount = "several"
+    case 12..<100:
+        naturalCount = "dozens of"
+    case 100..<1000:
+        naturalCount = "hundreds of"
+    default:
+        naturalCount = "many"
+    }
+    print("There are \(naturalCount) \(countedThings)")
+    
+    //  下面的例子展示了如何使用一个 (Int, Int) 类型的元组来分类下图中的点(x, y):
+    let somePoint = (-11, -1)
+    switch somePoint {
+    case (0, 0):
+        print("\(somePoint)")
+    case (_, 0):
+        print("(\(somePoint.0), 0) is on the x-axis")
+    case (0, _):
+        print("(0, \(somePoint.1)) is on the y-axis")
+    case (-2...2, -2...2):
+        print("(\(somePoint.0), \(somePoint.1)) is inside the box")
+    default:
+        print("(\(somePoint.0), \(somePoint.1)) is outside of the box")
+    }
+    
+    //  Where
+    //  case 分支的模式可以使用 where 语句来判断额外的条件。
+    let yetAnotherPoint = (1, -10)
+    switch yetAnotherPoint {
+    case let (x, y) where x == y:
+        print("(\(x), \(y)) is on the line x == y")
+    case let (x, y) where x == -y:
+        print("(\(x), \(y)) is on the line x == -y")
+    case let (x, y):
+        print("(\(x), \(y)) is just some arbitrary point")
+    }
+    
+    //  复合匹配
+    let <#name#> = <#value#>
+    
+    
 }
 
 simpleDemo()
@@ -270,6 +375,7 @@ assertDemo()
 basicOperations()
 arrayDemo()
 dictionaryDemo()
+controlFlowDemo()
 
 
 
