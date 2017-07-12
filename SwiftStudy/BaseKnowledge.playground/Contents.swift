@@ -362,10 +362,38 @@ func controlFlowDemo () {
     }
     
     //  复合匹配
-    let <#name#> = <#value#>
+    let character1 : Character = "e"
+    switch character1 {
+    case "a", "e", "i", "o", "u":
+        print("\(character1) is a vowel")
+    default:
+        print("\(character1) is a noraml")
+    }
     
+    let stillAnotherPoint = (9, 0)
+    switch stillAnotherPoint {
+    case (let distance, 0), (0, let distance):
+        print("On a axis, \(distance) from the origin")
+    default:
+        print("Not on an axis")
+    }
+}
+
+func fallThroughDemo () {
+    let integerToDescribe = 5
+    var description = "The number \(integerToDescribe) is"
+    switch integerToDescribe {
+    case 2,3,5,7,11,13:
+        description += " a prime number, and also"
+        fallthrough
+    default:
+        description += " an integer"
+    }
+    
+    print(description)
     
 }
+
 
 simpleDemo()
 tuplesDemo()
@@ -376,6 +404,6 @@ basicOperations()
 arrayDemo()
 dictionaryDemo()
 controlFlowDemo()
-
+fallThroughDemo()
 
 
